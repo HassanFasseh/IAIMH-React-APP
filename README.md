@@ -18,7 +18,7 @@ Clone this repository
 bash
 Copy
 Edit
-git clone https://github.com/YourUsername/myapp.git
+git clone https://github.com/YourUsername/myapp.git](https://github.com/HassanFasseh/IAIMH-React-APP.git
 Navigate into the folder
 
 bash
@@ -38,22 +38,8 @@ Edit
 npm start
 Opens at http://localhost:3000 and reloads automatically when you edit files.
 
-🏗️ Building for Production
-bash
-Copy
-Edit
-npm run build
-Creates a build folder with static files ready to deploy.
 
-🧪 Running Tests
-bash
-Copy
-Edit
-npm test
-📂 Project Structure
-csharp
-Copy
-Edit
+
 myapp/
 ├── public/             # Static public assets
 ├── src/                # Source code
