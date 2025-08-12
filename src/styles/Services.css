@@ -1,0 +1,260 @@
+
+        /* Additional services page styles */
+        .services-hero {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1465&q=80') center/cover no-repeat;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .services-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .services-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .services-hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            color: var(--dark-text);
+            opacity: 0.9;
+        }
+        
+        .services-intro {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .services-intro h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .services-intro p {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+        }
+        
+        .service-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .service-tab {
+            padding: 12px 25px;
+            background-color: white;
+            border: 1px solid var(--gray-border);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .service-tab:hover, .service-tab.active {
+            background-color: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+        
+        .service-categories {
+            margin-bottom: 80px;
+        }
+        
+        .service-category {
+            display: none;
+        }
+        
+        .service-category.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .service-category-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--primary-blue);
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .service-description {
+            color: #64748B;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .service-features {
+            margin-bottom: 25px;
+        }
+        
+        .service-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .service-feature i {
+            color: var(--accent-green);
+            margin-right: 10px;
+        }
+        
+        .service-cta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-border);
+        }
+        
+        .service-price {
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .service-price.free {
+            color: var(--accent-green);
+        }
+        
+        .service-btn {
+            padding: 10px 20px;
+            background-color: var(--primary-blue);
+            color: white;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .service-btn:hover {
+            background-color: #1D4ED8;
+        }
+        
+        .consultation-cta {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: var(--radius-lg);
+            margin-bottom: 80px;
+        }
+        
+        .consultation-cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .consultation-cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .consultation-cta .btn {
+            background-color: white;
+            color: var(--primary-blue);
+        }
+        
+        .consultation-cta .btn:hover {
+            background-color: var(--light-bg);
+        }
+        
+        @media (max-width: 768px) {
+            .services-hero {
+                padding: 120px 0 80px;
+            }
+            
+            .services-hero h1 {
+                font-size: 36px;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-tabs {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 10px;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .service-tab {
+                display: inline-block;
+            }
+        }
+        
+    

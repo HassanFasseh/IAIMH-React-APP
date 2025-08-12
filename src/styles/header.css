@@ -1,0 +1,188 @@
+/* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: var(--shadow-sm);
+            z-index: 100;
+            padding: 5px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .logo-image {
+            height: 100%;
+            width: auto; /* Maintain aspect ratio */
+            max-width: 200px; /* Maximum width to prevent it from being too wide */
+        }
+
+        .login-btn {
+            padding: 8px 16px;
+            background-color: var(--primary-blue); /* Change to your theme color */
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background 0.3s;
+            font-weight: 400;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        nav ul li {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 0;
+                padding: 10px 0;
+                border-bottom: 1px solid var(--gray-border);
+            }
+
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            /* Dropdown menu for mobile */
+            nav ul li .dropdown-menu {
+                position: static;
+                display: none;
+                box-shadow: none;
+                padding: 10px 0 0 15px;
+            }
+
+            nav ul li.dropdown:hover .dropdown-menu,
+            nav ul li.dropdown.show .dropdown-menu {
+                display: block;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                z-index: 101;
+            }
+
+            .login-btn {
+                margin-left: auto;
+                margin-right: 15px;
+            }
+        }
+    
+
+/* Hide dropdown by default */
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below parent link */
+    left: 0;
+    background: white;
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    z-index: 1000;
+}
+
+/* Dropdown links */
+        nav ul li .dropdown-menu li {
+            padding: 0;
+        }
+
+        nav ul li .dropdown-menu li a {
+            display: block;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        nav ul li .dropdown-menu li a:hover {
+            background: #f5f5f5;
+        }
+
+        /* Show dropdown on hover */
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+
+        .logo {
+  display: flex;
+  align-items: center;
+  min-height: 50px; /* Match your logo height */
+  /* Remove any transitions that might affect the logo */
+  transition: none !important;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  max-width: 200px; /* Adjust to your logo's max width */
+  object-fit: contain;
+  display: block;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px; /* Slightly taller than your logo */
+}
